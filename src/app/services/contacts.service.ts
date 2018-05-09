@@ -17,4 +17,12 @@ export class ContactsService {
     return this.httpClient.get(`${this.API_URL}/contacts`);
   }
 
+  getApiContactsOneByOne(id: number) {
+    return this.httpClient.get(`${this.API_URL}/contacts/${id}`);
+  }
+
+  putApiContact(contact: any) {
+    return this.httpClient.put(`${this.API_URL}/contacts`, contact);
+  }
+
 }
