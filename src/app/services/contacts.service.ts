@@ -29,4 +29,8 @@ export class ContactsService {
     return this.httpClient.post(`${this.API_URL}/contacts`, contact);
   }
 
+  getApiDeleteContact(id: any) {
+    return this.httpClient.put(`${this.API_URL}/contacts/remove`, id);
+  }
+
 }

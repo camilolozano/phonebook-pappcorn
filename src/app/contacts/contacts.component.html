@@ -4,5 +4,14 @@
 </div>
 <div *ngFor="let contact of contacts">
   <span>Name contact: {{contact.name}} {{contact.lastname}} </span>
-  <span (click)="editContact(contact)">Edit</span>
+  <span (click)="editContact(contact)">Edit </span>
+  <span (click)="deleteContact(contact.idContact)">Delete </span>
+</div>
+<div>
+  {{msg}}
+</div>
+<div>
+  <div>
+    <span (click)="createContact()">Create contact</span>
+  </div>
 </div>

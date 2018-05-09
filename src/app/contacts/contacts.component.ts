@@ -13,6 +13,7 @@ import { ContactsService } from '../services/contacts.service';
 export class ContactsComponent implements OnInit {
 
   public contacts: [any];
+  public msg: string;
 
   constructor(
     private router: Router,
@@ -28,13 +29,34 @@ export class ContactsComponent implements OnInit {
     this.router.navigate(['edit-contacts', id]);
   }
 
+  deleteContact(e: any) {
+    const contact = {
+      id: e
+    };
+    this.contactsService.getApiDeleteContact(contact).subscribe(
+      res => {
+        this.msg = res['msg'];
+      },
+      err => console.log(err),
+      () => {
+        setTimeout(() => {
+          this.msg = '';
+        }, 4000);
+        this.getContacts();
+      }
+    );
+  }
+
   getContacts() {
     this.contactsService.getApiGetContacts().subscribe(
       data => {
         this.contacts = data['contacts'];
-        console.log(this.contacts);
       }
     );
+  }
+
+  createContact() {
+    this.router.navigate(['create-contacts']);
   }
 
 }
