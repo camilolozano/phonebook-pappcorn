@@ -25,4 +25,8 @@ export class ContactsService {
     return this.httpClient.put(`${this.API_URL}/contacts`, contact);
   }
 
+  postApiContact(contact: any) {
+    return this.httpClient.post(`${this.API_URL}/contacts`, contact);
+  }
+
 }

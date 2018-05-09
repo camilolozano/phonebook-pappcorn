@@ -6,6 +6,7 @@ import { DiaryComponent } from './diary/diary.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { EditContactsComponent } from './edit-contacts/edit-contacts.component';
+import { CreateContactComponent } from './create-contact/create-contact.component';
 
 export const routes: Routes = [
     {
@@ -19,6 +20,10 @@ export const routes: Routes = [
     {
         path: 'edit-contacts/:id',
         component: EditContactsComponent
+    },
+    {
+        path: 'create-contacts',
+        component: CreateContactComponent
     },
     {
         path: '**',

@@ -11,6 +11,7 @@ import { DiaryComponent } from './diary/diary.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { EditContactsComponent } from './edit-contacts/edit-contacts.component';
+import { CreateContactComponent } from './create-contact/create-contact.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EditContactsComponent } from './edit-contacts/edit-contacts.component';
     DiaryComponent,
     PageNotFoundComponent,
     ContactsComponent,
-    EditContactsComponent
+    EditContactsComponent,
+    CreateContactComponent
   ],
   imports: [
     BrowserModule,
